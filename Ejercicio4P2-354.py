@@ -24,12 +24,6 @@ from sklearn.neural_network import MLPClassifier
 mlp = MLPClassifier(hidden_layer_sizes=(6,6,6,6),solver='lbfgs',max_iter=6000)
 mlp.fit(X_train, y_train)
 predictions = mlp.predict(X_test)
-'''
-mlp=MLPClassifier(hidden_layer_sizes=(10,10,10), max_iter=500, alpha=0.0001,
-                     solver='adam', random_state=21,tol=0.000000001)
-mlp = MLPClassifier(hidden_layer_sizes=(6,6,6,6),solver='lbfgs',max_iter=6000)
-
-'''
 
 from sklearn.metrics import classification_report, confusion_matrix
 print(classification_report(y_test,predictions))
